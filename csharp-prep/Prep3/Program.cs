@@ -4,34 +4,36 @@ class Program
 {
     static void Main(string[] args)
     {
-//Ask the user to enter a magic number
-        Console.Write("User 1, please enter the magic number: ");
-        int number = Convert.ToInt32(Console.ReadLine());
+//Random Generator
+Random randomGenerator = new Random();
+int number = randomGenerator.Next(1, 100);
         
-        int guess = 10032450;
+        int guess = 0;
+        int user_guess = 10032450;
 
-//Add a loop that keeps looping as long as the guess does not match the magic number.
-        while (guess!= number) {
-
-//Ask the user for a guess.
+//Add a loop that keeps looping as long as the user_guess does not match the magic number.
+        while (user_guess!= number) {
+//Keep track of number of guesses
+                guess ++;
+//Ask the user for a user_guess.
                 Console.Write("User 2, what is your guess: ");
-                guess = Convert.ToInt32(Console.ReadLine());
+                user_guess = Convert.ToInt32(Console.ReadLine());
 // Higher message
-                if (guess < number)
+                if (user_guess < number)
                 {Console.WriteLine("Higher");}
 //Lower message
-                else if (guess > number) 
+                else if (user_guess > number) 
                 {Console.WriteLine("Lower");}
 //Correct message
                 else 
-                {Console.WriteLine("Congrats! You guessed the magic number!");}
+                {Console.WriteLine($"Congrats! You guessed the magic number in {guess} tries!");
         }
+} 
+
+//After the game is over, ask the user if they want to play again. Then, loop back and play the whole game again and continue this loop as long as they keep saying "yes".
+  //Console.Write("Do you want to play again?");
+        //string play_again = Console.ReadLine();
+        //if (play_again.ToLower() == "yes") 
     }
 }
 
-//Instead of having the user supply the magic number, generate a random number from 1 to 100.
-
-//Stretch Challenge
-//Keep track of how many guesses the user has made and inform them of it at the end of the game.
-
-//After the game is over, ask the user if they want to play again. Then, loop back and play the whole game again and continue this loop as long as they keep saying "yes".
