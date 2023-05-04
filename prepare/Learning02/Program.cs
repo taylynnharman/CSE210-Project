@@ -16,7 +16,13 @@ class Program
         job2._startYear = "2000";
         job2._endYear = "2010";
 
-        job1.Display();
+        Resume resume = new Resume();
+        resume._name = "Allison Rose";
+
+        resume._jobs.Add(job1);
+        resume._jobs.Add(job2);
+
+        resume.Display();
     }
     
 }
