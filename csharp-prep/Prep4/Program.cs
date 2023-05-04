@@ -27,15 +27,12 @@ class Program
             max = user_num;
         }
 //Compute the average of the numbers in the list.
-        count = count+1;
+        
         }
-    float average = sum/count; 
+    float average = sum/numbers.Count; 
 
-Console.WriteLine($"List{numbers}");
 Console.WriteLine($"Sum:{sum}");
 Console.WriteLine($"Max:{max}");
 Console.WriteLine($"Average:{average}");
-Console.WriteLine($"Count{count}");
-
     }
 }
