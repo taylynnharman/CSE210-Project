@@ -15,14 +15,39 @@ class Program
         int userChoice = Convert.ToInt32(Console.ReadLine());
 
         if (userChoice == 1)
-        {Console.WriteLine}
-
         
+        
+        Console.WriteLine("Choice 1");
+
+        else if (userChoice == 2)
+        
+        
+        Console.WriteLine("Choice 2");
+        else if (userChoice == 3)
+        
+        journal.Display();
+
+        Console.WriteLine("Choice 3");
+
+        else if (userChoice == 4)
+        
+        
+        Console.WriteLine("Choice 4");
+
+        else if (userChoice == 5)
+        Console.WriteLine("Program has been ended.");
+
+        else 
+        Console.WriteLine("Please enter a valid option");
+
         DateTime currentDateTime = DateTime.Now;
         Console.WriteLine($"{currentDateTime}");
     }
 }
 
+/* Design: 
+Classes: entry, prompt, journal. The entry will hold the template for the journal entry. The prompt will hold and generate a prompt for the user, and the journal will hold the responses.
+*/
 
 /*Program Specification
 For this assignment you will write a program to help people record the events of their day by supplying prompts and then saving their responses along with the question and the date to a file.
