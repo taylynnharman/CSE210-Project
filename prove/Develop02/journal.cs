@@ -14,3 +14,5 @@ public class Journal {
     }
 
 }
+
+//Hold entries and responses

@@ -49,9 +49,11 @@ class Program
 Classes: entry, prompt, journal. The entry will hold the template for the journal entry. The prompt will hold and generate a prompt for the user, and the journal will hold the responses.
 */
 
-/*Program Specification
-For this assignment you will write a program to help people record the events of their day by supplying prompts and then saving their responses along with the question and the date to a file.
+/* Description of how elements interact: 
+When write is called entry program is used as template for the user to fill out. The prompt program is also called to give the user a prompt when filling out the entry. After the user fills out their entry they can choose to save it to their journal where it will be copied onto the file.
+*/
 
+/*
 Functional Requirements
 
 Write a new entry - Show the user a random prompt (from a list that you create), and save their response, the prompt, and the date as an Entry.
@@ -60,13 +62,8 @@ Save the journal to a file - Prompt the user for a filename and then save the cu
 Load the journal from a file - Prompt the user for a filename and then load the journal (a complete list of entries) from that file. This should replace any entries currently stored the journal.
 Provide a menu that allows the user choose these options
 Your list of prompts must contain at least five different prompts. Make sure to add your own prompts to the list, but the following are examples to help get you started:
-Who was the most interesting person I interacted with today?
-What was the best part of my day?
-How did I see the hand of the Lord in my life today?
-What was the strongest emotion I felt today?
-If I had one thing I could do over today, what would it be?
-Your interface should generally follow the pattern shown in the video demo below.
 
+\
 Design Requirements:
 Contain classes for the major components in the program.
 Contain at least two classes in addition to the Program class.

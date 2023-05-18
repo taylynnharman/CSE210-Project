@@ -1,4 +1,6 @@
 public class Prompt {
+    public string prompt()
+    {
     List<string>prompts = new List<string> {
         "Who was the most interesting person I interacted with today?",
 "What was the best part of my day?",
@@ -9,6 +11,8 @@ public class Prompt {
 "How did you improve today?", 
 "Who do you feel prompted to reach out to today?"};
 
-int index = random.Next(list.Count);
-Console.WriteLine(list[index]);
+Random random = new Random();
+int index = random.Next(prompts.Count);
+return (prompts[index]);
+    }
 }

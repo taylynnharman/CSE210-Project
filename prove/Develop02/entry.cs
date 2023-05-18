@@ -5,6 +5,8 @@ public class Entry {
 
         public void Display()
     {
-        Console.WriteLine($"Date:{_date} Prompt:({_prompt}) Respond:{_response}");
+        Console.WriteLine($"Date:{_date} Prompt:({_prompt}) Response:{_response}");
     }
 }
+
+//Hold template for entries
