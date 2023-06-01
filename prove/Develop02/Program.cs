@@ -13,35 +13,56 @@ class Program
         Console.WriteLine("5.Quit");
         Console.WriteLine("Please enter which you would like to do using the # assigned: ");
         int userChoice = Convert.ToInt32(Console.ReadLine());
+        Journal journal = new Journal();
 
-        if (userChoice == 1)
-        
-        
-        Console.WriteLine("Choice 1");
+        if (userChoice == 1) {
 
-        else if (userChoice == 2)
-        
-        
-        Console.WriteLine("Choice 2");
-        else if (userChoice == 3)
-        
-        journal.Display();
+            string currentDateTime = DateTime.Now.ToShortDateString();
 
-        Console.WriteLine("Choice 3");
+            Console.WriteLine("Choice 1: Write in my Journal");
+            Console.WriteLine("");
+            Prompt prompt = new Prompt();
+            string userPrompt = prompt.GivePrompt();
+            Console.WriteLine(userPrompt);
 
-        else if (userChoice == 4)
-        
-        
+            Entry entry = new Entry ();
+            entry._response = Console.ReadLine();
+            entry._prompt = userPrompt;
+            entry._date = currentDateTime;
+
+            journal._entries.Add(entry);
+            Console.WriteLine("");
+            Console.WriteLine("Entry saved to Journal");
+            Console.WriteLine("");
+            
+        }
+
+        else if (userChoice == 2) {
+            Console.WriteLine("Choice 2: Display Journal");
+            Console.WriteLine("");
+            Console.WriteLine(journal._entries.ToString());
+            
+            
+            
+            
+        }
+
+        else if (userChoice == 3) {
+            
+            Console.WriteLine("Choice 3");
+        }
+
+        else if (userChoice == 4){    
         Console.WriteLine("Choice 4");
+        }
 
-        else if (userChoice == 5)
-        Console.WriteLine("Program has been ended.");
+        else if (userChoice == 5){
+            Console.WriteLine("Program has been ended.");
+        }
 
-        else 
+        else {
         Console.WriteLine("Please enter a valid option");
-
-        DateTime currentDateTime = DateTime.Now;
-        Console.WriteLine($"{currentDateTime}");
+        }
     }
 }
 
