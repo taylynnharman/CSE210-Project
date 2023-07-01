@@ -1,18 +1,22 @@
 public class Journal {
-    public string _entryname = "";
-    public List<Entry> _entries = new List<Entry>();
-
+    private List<Entry> _entries = new List<Entry>();
+    
+    public void AddEntry (Entry entry)
+    {
+        _entries.Add(entry)
+    }
     public void Display()
     {
-        Console.WriteLine($"Entry Name: {_entryname}");
-        Console.WriteLine($"Entry: ");
-
         foreach (Entry entry in _entries)
         {
             entry.Display();
         }
     }
+    public void Save(string fileName)
+    {
 
+    }
+    public void Load(string fileName)
 }
 
 //Hold entries and responses

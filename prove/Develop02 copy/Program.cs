@@ -47,16 +47,12 @@ class Program
         }
 
         else if (userChoice == 3) {
+            
             Console.WriteLine("Choice 3");
-             Console.WriteLine("");
-            Console.WriteLine("Please enter the filename you would like to load");
-
         }
 
         else if (userChoice == 4){    
         Console.WriteLine("Choice 4");
-        Console.WriteLine("");
-        Console.WriteLine("Please enter the filename you would like to save to");
         }
 
         else if (userChoice == 5){
