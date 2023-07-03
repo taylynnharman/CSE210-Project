@@ -1,10 +1,11 @@
 public class Journal {
     private List<Entry> _entries = new List<Entry>();
-    
-    public void AddEntry (Entry entry)
+
+    public void AddEntry(Entry entry)
     {
-        _entries.Add(entry)
+        _entries.Add(entry);
     }
+
     public void Display()
     {
         foreach (Entry entry in _entries)
@@ -12,11 +13,14 @@ public class Journal {
             entry.Display();
         }
     }
+
     public void Save(string fileName)
     {
 
     }
-    public void Load(string fileName)
-}
 
-//Hold entries and responses
+    public void Load(string fileName)
+    {
+
+    }
+}

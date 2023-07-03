@@ -26,7 +26,7 @@ class Program
             Prompt prompt = new Prompt();
             string userPrompt = prompt.GivePrompt();
             Console.WriteLine(userPrompt);
-
+            
             Entry entry = new Entry ();
             entry._response = Console.ReadLine();
             entry._prompt = userPrompt;
@@ -69,32 +69,3 @@ class Program
     }
 }
 
-/* Design: 
-Classes: entry, prompt, journal. The entry will hold the template for the journal entry. The prompt will hold and generate a prompt for the user, and the journal will hold the responses.
-*/
-
-/* Description of how elements interact: 
-When write is called entry program is used as template for the user to fill out. The prompt program is also called to give the user a prompt when filling out the entry. After the user fills out their entry they can choose to save it to their journal where it will be copied onto the file.
-*/
-
-/*
-Functional Requirements
-
-Write a new entry - Show the user a random prompt (from a list that you create), and save their response, the prompt, and the date as an Entry.
-Display the journal - Iterate through all entries in the journal and display them to the screen.
-Save the journal to a file - Prompt the user for a filename and then save the current journal (the complete list of entries) to that file location.
-Load the journal from a file - Prompt the user for a filename and then load the journal (a complete list of entries) from that file. This should replace any entries currently stored the journal.
-Provide a menu that allows the user choose these options
-Your list of prompts must contain at least five different prompts. Make sure to add your own prompts to the list, but the following are examples to help get you started:
-
-\
-Design Requirements:
-Contain classes for the major components in the program.
-Contain at least two classes in addition to the Program class.
-Demonstrate the principle of abstraction by using member variables and methods appropriately.
-
-
-Do not worry about the following:
-Saving your file as a .csv file requires you to handle commas and quotes in the content appropriately. At this point, you can ignore that and just choose a symbol for a separator that you think is unlikely to show up in the content (such as | or ~ or ~|~).
-You do not need to store the date as an actual C# DateTime object in your class or in the file. You can simply store it as a string.
-*/
