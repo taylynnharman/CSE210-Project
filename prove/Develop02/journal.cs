@@ -16,11 +16,27 @@ public class Journal {
 
     public void Save(string fileName)
     {
-
+    Console.Write("Enter the filename to save the journal: ");
+        string filename = Console.ReadLine();
+        try
+        {
+            using (StreamWriter writer = new StreamWriter(filename))
+            {
+                foreach (Entry entry in _entries) 
+                {
+                    writer.WriteLine(entry.Display());
+                }
+            }
+            Console.WriteLine("Journal saved successfully.");
+        }
+        catch (IOException e)
+        {
+            Console.WriteLine("Error saving the journal: " + e.Message);
+        }
+    }
     }
 
     public void Load(string fileName)
     {
 
     }
-}

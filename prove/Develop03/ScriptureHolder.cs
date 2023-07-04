@@ -1,0 +1,1 @@
+//Hold users scriptures so they can display what has been memorized. List 1. 2. 3. 4. let user pick scripture to practice and run through program.
