@@ -1,59 +1,43 @@
+//Write a program that creates at least two orders with a 2-3 products each. Call the methods to get the packing label, the shipping label, and the total price of the order, and display the results of these methods.
+
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation2 World!");
+        //Order 1
+        Address address1 = new Address("525 S Center St", "Rexburg", "Idaho", "USA");
+        Customer customer1 = new Customer("Jerry Steimer", address1);
+        Product product1 = new Product("Dog Chew Toy", "8394", 7, 3);
+        Product product2 = new Product("Grill Scraper", "1230", 30, 1);
+
+
+        //Order 2
+        Address address2 = new Address("80 Grayson Street", "Wentworth", "New South Wales", "Austrailia");
+        Customer customer2 = new Customer("Nancy Drew", address2);
+        Product product3 = new Product("How to code in C#", "929", 10, 1);
+        Product product4 = new Product("Girl Scout Cookies", "0023", 5, 4);
+
+        // Create orders with products and customers
+        Order order1 = new Order(new List<Product> { product1, product2 }, customer1);
+        Order order2 = new Order(new List<Product> { product2, product3 }, customer2);
+
+        // Display packing label, shipping label, and total cost for each order
+        Console.WriteLine("Order 1:");
+        Console.WriteLine("Packing Label:");
+        Console.WriteLine(order1.PackingLabel());
+        Console.WriteLine("Shipping Label:");
+        Console.WriteLine(order1.ShippingLabel());
+        Console.WriteLine("Total Cost: $" + order1.TotalCost());
+
+        Console.WriteLine();
+
+        Console.WriteLine("Order 2:");
+        Console.WriteLine("Packing Label:");
+        Console.WriteLine(order2.PackingLabel());
+        Console.WriteLine("Shipping Label:");
+        Console.WriteLine(order2.ShippingLabel());
+        Console.WriteLine("Total Cost: $" + order2.TotalCost());
     }
 }
-/*Product
-* Contains the name, product id, price, and quantity of each product.
-* The price of this product is computed by multiplying the price and the quantity.]
-* Why can't I use the format private string _name { get;,set; } like in foundations 1?
-*/
-class Product{
-    private string _name;
-    private string _productId;
-    private decimal _price;
-    private int _quantity;
-
-}
-class Customer{}
-class Address{}
-
-/* Contains a list of products and a customer. Can calculate the total cost of the order, and can return a string for the packing label, and can return a string for the shipping label.
-* The total price is calculated as the sum of the prices of each product plus a one-time shipping cost.
-* This company is based in the USA. If the customer lives in the USA, then the shipping cost is $5. If the customer does not live in the USA, then the shipping cost is $35.
-* A packing label should list the name and product id of each product in the order.
-* A shipping label should list the name and address of the customer
-*/
-class Order{
-    private List<Product> _products;
-    private string _customer;
-
-    public TotalCost()
-    {
-        float totalCost = 0;
-    }
-}
-
-/*
-Program Specification
-
-Product
-* Contains the name, product id, price, and quantity of each product.
-* The price of this product is computed by multiplying the price and the quantity.
-Customer
-* The customer contains a name and an address.
-* The name is a string, but the Address is a class.
-* The customer should have a method that can return whether they live in the USA or not. (Hint this should call a method on the address to find this.)
-Address
-* The address contains a string for the street address, the city, state/province, and country.
-* The address should have a method that can return whether it is in the USA or not.
-* The address should have a method to return a string all of its fields together in one string (with newline characters where appropriate)
-Other considerations
-Make sure that all member variables are private and getters, setters, and constructors are created as needed.
-Once you have created these classes, write a program that creates at least two orders with a 2-3 products each. Call the methods to get the packing label, the shipping label, and the total price of the order, and display the results of these methods.
-
-*/
