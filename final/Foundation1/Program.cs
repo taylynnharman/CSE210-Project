@@ -10,7 +10,7 @@ class Program
         {
             Title = "Finding Nemo Merch Haul",
             Author = "Johnny Appleseed",
-            Duration = 32
+            Duration = 1345
         };
         video1.Comments.Add(new Comment { Name = "Kay Smith", Text = "Totally going to buy the nemo plushie for my niece!" });
         video1.Comments.Add(new Comment {Name = "Arnold Howard", Text = "A little pricey, but could be cool."});
@@ -20,7 +20,7 @@ class Program
         {
             Title = "Tommy gets new toys",
             Author = "TommyToys",
-            Duration = 45
+            Duration = 9283
         };
         video2.Comments.Add(new Comment { Name = "Helena V.", Text = "Totally Rad Tommy!" });
         video2.Comments.Add(new Comment {Name = "Stan Harold", Text = "Where can I get one?"});
@@ -30,7 +30,7 @@ class Program
         {
             Title = "My Dog Playing with his stuffed lightning mcqueen",
             Author = "Kim Harmon",
-            Duration = 10
+            Duration = 420
         };
         video3.Comments.Add(new Comment { Name = "Brittan Jones", Text = "Cute stuffy, and even cuter dog :)" });
         video3.Comments.Add(new Comment {Name = "Lexi Macentire", Text = "My dog loves their stuffed animal from Stuffies!"});
@@ -39,7 +39,7 @@ class Program
         List<Video> videos = new List<Video> { video1, video2, video3 };
 
         foreach(Video video in videos){
-            Console.WriteLine($"Title: {video.Title}, Author: {video.Author}, Length in Minutes: {video.Duration}, Number of Comments: {video.NumComments()}");
+            Console.WriteLine($"Title: {video.Title}, Author: {video.Author}, Length in Seconds: {video.Duration}, Number of Comments: {video.NumComments()}");
             Console.WriteLine("Comments:");
             foreach (Comment comment in video.Comments)
             {
