@@ -13,10 +13,10 @@ class Order{
         get { return _customer; }
         set { _customer = value; }
     }
-    public Order(List<Product> _products, Customer _customer)
+    public Order(List<Product> products, Customer customer)
     {
-        Products = _products;
-        Customer = _customer;
+        Products = products;
+        Customer = customer;
     }
     private decimal ShippingCost()
     //* This company is based in the USA. If the customer lives in the USA, then the shipping cost is $5. If the customer does not live in the USA, then the shipping cost is $35.

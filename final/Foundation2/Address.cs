@@ -28,11 +28,11 @@ class Address{
         get { return _country; }
         set { _country = value; }
     }
-    public Address(string _street, string _city, string _state, string _country){
-        Street = _street;
-        City = _city;
-        State = _state;
-        Country = _country;
+    public Address(string street, string city, string state, string country){
+        Street = street;
+        City = city;
+        State = state;
+        Country = country;
     }
     public bool LivesInUSA()
     {
@@ -41,12 +41,12 @@ class Address{
             return true;
         }
         else
-        {
+        { 
             return false;
         }
     }
         public override string ToString()
     {
-        return $"{Street}\n{City}, {State}\n{Country}";
+        return $"{_street}\n{City}, {State}\n{Country}";
     }
 }

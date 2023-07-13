@@ -19,10 +19,10 @@ class Customer{
         set { _address = value; }
     }
 
-    public Customer(string _name, Address _address)
+    public Customer(string name, Address address)
     {
-        Name = _name;
-        Address = _address;
+        Name = name;
+        Address = address;
     }   
     public bool LivesInUSA()
     {

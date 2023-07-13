@@ -28,12 +28,12 @@ class Product{
         get { return _quantity; }
         set { _quantity = value; }
     }
-    public Product(string _name, string _productId, decimal _price, int _quantity)
+    public Product(string name, string productId, decimal price, int quantity)
     {
-        Name = _name;
-        ProductID = _productId;
-        Price = _price;
-        Quantity = _quantity;
+        Name = name;
+        ProductID = productId;
+        Price = price;
+        Quantity = quantity;
     }
     public decimal TotalPrice()
     {
